@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		1549F8C8201954DF001D014D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1549F8C7201954DF001D014D /* AppDelegate.swift */; };
-		1549F8CA201954DF001D014D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1549F8C9201954DF001D014D /* ViewController.swift */; };
 		1549F8CD201954DF001D014D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8CB201954DF001D014D /* Main.storyboard */; };
 		1549F8CF201954DF001D014D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8CE201954DF001D014D /* Assets.xcassets */; };
 		1549F8D2201954DF001D014D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8D0201954DF001D014D /* LaunchScreen.storyboard */; };
 		15697BDA2019981F006C51F1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15697BD92019981F006C51F1 /* SWRevealViewController.m */; };
+		15697BE220199C3F006C51F1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15697BE120199C3F006C51F1 /* ChatViewController.swift */; };
+		15697BE420199C4E006C51F1 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15697BE320199C4E006C51F1 /* ChannelViewController.swift */; };
 		705C497984D1742F0925EA0D /* Pods_Blah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E1D4C16E029640DCC64706 /* Pods_Blah.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1549F8C4201954DF001D014D /* Blah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1549F8C7201954DF001D014D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1549F8C9201954DF001D014D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1549F8CC201954DF001D014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1549F8CE201954DF001D014D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1549F8D1201954DF001D014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1549F8D3201954DF001D014D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15697BD82019981F006C51F1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Blah Assets/SWReveal/SWRevealViewController.h"; sourceTree = SOURCE_ROOT; };
-		15697BD92019981F006C51F1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Blah Assets/SWReveal/SWRevealViewController.m"; sourceTree = SOURCE_ROOT; };
-		15697BDC201998A4006C51F1 /* Blah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Blah-Bridging-Header.h"; path = "Blah/Blah-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		15697BD82019981F006C51F1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Blah/Supporting Files/SWRevealViewController.h"; sourceTree = SOURCE_ROOT; };
+		15697BD92019981F006C51F1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Blah/Supporting Files/SWRevealViewController.m"; sourceTree = SOURCE_ROOT; };
+		15697BDC201998A4006C51F1 /* Blah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Blah-Bridging-Header.h"; path = "Blah/Supporting Files/Blah-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		15697BE120199C3F006C51F1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		15697BE320199C4E006C51F1 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		4B24FCA86AF5D183C684BD2E /* Pods-Blah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blah/Pods-Blah.debug.xcconfig"; sourceTree = "<group>"; };
 		A046E8EE1F2583D889B2B690 /* Pods-Blah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blah/Pods-Blah.release.xcconfig"; sourceTree = "<group>"; };
 		E6E1D4C16E029640DCC64706 /* Pods_Blah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +67,11 @@
 		1549F8C6201954DF001D014D /* Blah */ = {
 			isa = PBXGroup;
 			children = (
-				15697BD7201997AB006C51F1 /* Supporting Files */,
 				1549F8C7201954DF001D014D /* AppDelegate.swift */,
-				1549F8C9201954DF001D014D /* ViewController.swift */,
+				15697BE020199C0D006C51F1 /* Model */,
+				15697BDF20199C09006C51F1 /* View */,
+				15697BDE20199C01006C51F1 /* Controller */,
+				15697BDD201999ED006C51F1 /* Supporting Files */,
 				1549F8CB201954DF001D014D /* Main.storyboard */,
 				1549F8CE201954DF001D014D /* Assets.xcassets */,
 				1549F8D0201954DF001D014D /* LaunchScreen.storyboard */,
@@ -76,15 +80,37 @@
 			path = Blah;
 			sourceTree = "<group>";
 		};
-		15697BD7201997AB006C51F1 /* Supporting Files */ = {
+		15697BDD201999ED006C51F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				15697BD82019981F006C51F1 /* SWRevealViewController.h */,
 				15697BD92019981F006C51F1 /* SWRevealViewController.m */,
 				15697BDC201998A4006C51F1 /* Blah-Bridging-Header.h */,
 			);
-			name = "Supporting Files";
-			path = "New Group";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15697BDE20199C01006C51F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15697BE120199C3F006C51F1 /* ChatViewController.swift */,
+				15697BE320199C4E006C51F1 /* ChannelViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15697BDF20199C09006C51F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15697BE020199C0D006C51F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1F6AED5F454253A09B370A0C /* Frameworks */ = {
@@ -240,8 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1549F8CA201954DF001D014D /* ViewController.swift in Sources */,
 				1549F8C8201954DF001D014D /* AppDelegate.swift in Sources */,
+				15697BE220199C3F006C51F1 /* ChatViewController.swift in Sources */,
+				15697BE420199C4E006C51F1 /* ChannelViewController.swift in Sources */,
 				15697BDA2019981F006C51F1 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arehsan.Blah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blah/Blah-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blah/Supporting Files/Blah-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,7 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arehsan.Blah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Blah/Blah-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blah/Supporting Files/Blah-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

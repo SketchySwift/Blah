@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="eHD-Hg-1e5" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="5gA-gF-ac9"/>
+                        <segue destination="1bz-pu-EMJ" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Vcv-lq-zNx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-30" y="133"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="h4s-Xx-ZAX">
+            <objects>
+                <viewController id="1bz-pu-EMJ" customClass="ChatViewController" customModule="Blah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vim-ut-SfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-jk-nlh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-pR-Kdu">
+                                        <rect key="frame" x="107" y="36" width="161" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="161" id="wO7-Mq-oni"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1C-nD-nD3">
+                                        <rect key="frame" x="25" y="42" width="19" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="19" id="8az-18-fS7"/>
+                                            <constraint firstAttribute="height" constant="15" id="Moo-sy-H9n"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34509803921568627" green="0.37254901960784315" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Gyd-pR-Kdu" firstAttribute="centerY" secondItem="Q1C-nD-nD3" secondAttribute="centerY" id="5nM-zs-QTU"/>
+                                    <constraint firstAttribute="height" constant="77" id="8Yf-aC-Uf2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q1C-nD-nD3" secondAttribute="bottom" constant="20" id="fDN-93-75F"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gyd-pR-Kdu" secondAttribute="bottom" constant="15" id="fdQ-fL-g9J"/>
+                                    <constraint firstItem="Q1C-nD-nD3" firstAttribute="leading" secondItem="cxp-jk-nlh" secondAttribute="leading" constant="25" id="hkL-cH-hEF"/>
+                                    <constraint firstItem="Gyd-pR-Kdu" firstAttribute="centerX" secondItem="cxp-jk-nlh" secondAttribute="centerX" id="jxG-Dm-5ZF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cxp-jk-nlh" firstAttribute="leading" secondItem="WAP-OB-kGD" secondAttribute="leading" id="PBQ-mH-GdH"/>
+                            <constraint firstItem="cxp-jk-nlh" firstAttribute="trailing" secondItem="WAP-OB-kGD" secondAttribute="trailing" id="SCR-XX-fJZ"/>
+                            <constraint firstItem="cxp-jk-nlh" firstAttribute="top" secondItem="Vim-ut-SfH" secondAttribute="top" id="tmD-m3-ltY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WAP-OB-kGD"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="Q1C-nD-nD3" id="4wu-lj-4q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwX-7r-Qh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.79999999999995" y="493.40329835082463"/>
+        </scene>
+        <!--Channel View Controller-->
+        <scene sceneID="gth-U5-7xb">
+            <objects>
+                <viewController id="eHD-Hg-1e5" customClass="ChannelViewController" customModule="Blah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgB-1t-l9A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8UK-Jg-WcI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axD-Uy-EJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-200"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="75" height="63"/>
+    </resources>
 </document>
