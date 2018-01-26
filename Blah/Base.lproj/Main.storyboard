@@ -94,19 +94,127 @@
         <scene sceneID="gth-U5-7xb">
             <objects>
                 <viewController id="eHD-Hg-1e5" customClass="ChannelViewController" customModule="Blah" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YgB-1t-l9A">
+                    <view key="view" contentMode="scaleToFill" id="YgB-1t-l9A" customClass="GradientView" customModule="Blah" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-bS-eRg">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="172"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4n-cR-q0v">
+                                        <rect key="frame" x="53" y="131" width="208" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="208" id="rv3-ff-O11"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blahLogo" translatesAutoresizingMaskIntoConstraints="NO" id="I7s-yu-h67">
+                                        <rect key="frame" x="113" y="25" width="88" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="4FH-bI-XkW"/>
+                                            <constraint firstAttribute="width" constant="88" id="y0D-AZ-VUu"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="44"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34509803921568627" green="0.37254901960784315" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="I7s-yu-h67" firstAttribute="top" secondItem="ubL-bS-eRg" secondAttribute="top" constant="25" id="9al-YJ-hcU"/>
+                                    <constraint firstItem="I7s-yu-h67" firstAttribute="centerX" secondItem="ubL-bS-eRg" secondAttribute="centerX" id="HcW-b8-dlu"/>
+                                    <constraint firstItem="A4n-cR-q0v" firstAttribute="centerX" secondItem="ubL-bS-eRg" secondAttribute="centerX" id="VaU-9w-TkY"/>
+                                    <constraint firstAttribute="height" constant="172" id="aXR-S4-xZM"/>
+                                    <constraint firstItem="A4n-cR-q0v" firstAttribute="top" secondItem="I7s-yu-h67" secondAttribute="bottom" constant="18" id="l0J-zf-WOy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-Jr-gSA">
+                                <rect key="frame" x="20" y="196" width="84" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="lRQ-6A-7Mh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19.600000381469727"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXC-rg-Lsm">
+                                <rect key="frame" x="20" y="230" width="295" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="aD1-Wa-7do"/>
+                                    <constraint firstAttribute="width" constant="295" id="qm3-he-Oe8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-Rw-Jmd">
+                                <rect key="frame" x="240" y="197" width="65" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3cL-Ea-DJf"/>
+                                    <constraint firstAttribute="width" constant="65" id="S0x-hk-Oy5"/>
+                                </constraints>
+                                <state key="normal" image="add_channel"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z9n-dB-KxJ">
+                                <rect key="frame" x="16" y="247" width="299" height="336"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="ORI-lW-Ha2"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-Jg-KYG">
+                                <rect key="frame" x="51" y="601" width="213" height="46"/>
+                                <color key="backgroundColor" red="0.34901960784313724" green="0.792156862745098" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="PVh-l7-LzV"/>
+                                    <constraint firstAttribute="width" constant="213" id="R2q-8M-evB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ubL-bS-eRg" firstAttribute="top" secondItem="YgB-1t-l9A" secondAttribute="top" id="2oe-j2-teg"/>
+                            <constraint firstItem="z9n-dB-KxJ" firstAttribute="leading" secondItem="8UK-Jg-WcI" secondAttribute="leading" constant="16" id="5oi-f9-QKB"/>
+                            <constraint firstItem="z9n-dB-KxJ" firstAttribute="top" secondItem="lXC-rg-Lsm" secondAttribute="bottom" constant="15" id="7Lm-3Z-8jg"/>
+                            <constraint firstItem="hrC-Jr-gSA" firstAttribute="top" secondItem="ubL-bS-eRg" secondAttribute="bottom" constant="24" id="HIg-D7-4nG"/>
+                            <constraint firstItem="hrC-Jr-gSA" firstAttribute="leading" secondItem="8UK-Jg-WcI" secondAttribute="leading" constant="20" id="LtS-xS-YUb"/>
+                            <constraint firstItem="ubL-bS-eRg" firstAttribute="leading" secondItem="8UK-Jg-WcI" secondAttribute="leading" id="MiF-Pa-SBq"/>
+                            <constraint firstItem="8UK-Jg-WcI" firstAttribute="bottom" secondItem="vvi-Jg-KYG" secondAttribute="bottom" constant="20" id="OXr-7r-DYE"/>
+                            <constraint firstItem="vvi-Jg-KYG" firstAttribute="top" secondItem="z9n-dB-KxJ" secondAttribute="bottom" constant="18" id="UIi-9S-olu"/>
+                            <constraint firstItem="lXC-rg-Lsm" firstAttribute="top" secondItem="hrC-Jr-gSA" secondAttribute="bottom" constant="11" id="XTr-tp-geI"/>
+                            <constraint firstItem="hrC-Jr-gSA" firstAttribute="centerY" secondItem="xyI-Rw-Jmd" secondAttribute="centerY" id="Xhl-0z-9hW"/>
+                            <constraint firstItem="vvi-Jg-KYG" firstAttribute="leading" secondItem="8UK-Jg-WcI" secondAttribute="leading" constant="51" id="c8f-Sf-0xN"/>
+                            <constraint firstItem="lXC-rg-Lsm" firstAttribute="leading" secondItem="YgB-1t-l9A" secondAttribute="leading" constant="20" id="krx-uB-Mf1"/>
+                            <constraint firstItem="lXC-rg-Lsm" firstAttribute="top" secondItem="xyI-Rw-Jmd" secondAttribute="bottom" constant="11" id="qrh-8L-y9r"/>
+                            <constraint firstAttribute="trailing" secondItem="lXC-rg-Lsm" secondAttribute="trailing" constant="60" id="r0C-df-lVQ"/>
+                            <constraint firstItem="8UK-Jg-WcI" firstAttribute="trailing" secondItem="xyI-Rw-Jmd" secondAttribute="trailing" constant="70" id="uTm-Dw-o75"/>
+                            <constraint firstItem="8UK-Jg-WcI" firstAttribute="trailing" secondItem="ubL-bS-eRg" secondAttribute="trailing" constant="60" id="xR5-gg-kwN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8UK-Jg-WcI"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.43137254901960786" green="0.46666666666666667" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.32941176470588235" green="0.37647058823529411" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axD-Uy-EJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="-200"/>
+            <point key="canvasLocation" x="944.79999999999995" y="-200.14992503748127"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add_channel" width="65" height="22"/>
+        <image name="blahLogo" width="1024" height="1024"/>
         <image name="menu" width="75" height="63"/>
     </resources>
 </document>
