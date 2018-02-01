@@ -22,4 +22,8 @@ class LoginViewController: UIViewController {
 	@IBAction func registerBtnPressed(_ sender: Any) {
 		performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
 	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		view.endEditing(true)
+	}
 }

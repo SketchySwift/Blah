@@ -333,7 +333,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0dR-uS-Pt4">
                                 <rect key="frame" x="38" y="319" width="299" height="130"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="matthew joe" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-Wa-D0W" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-Wa-D0W" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="55"/>
                                         <color key="backgroundColor" red="0.22745098039215686" green="0.28627450980392155" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -349,7 +349,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="•••••••" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnV-Dz-wZA" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnV-Dz-wZA" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="299" height="55"/>
                                         <color key="backgroundColor" red="0.22745098039215686" green="0.28627450980392155" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -410,7 +410,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signInBtnPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="eg1-NI-fl4"/>
+                                    <action selector="closeBtnPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="okz-Uu-HVm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-tB-6OV">
@@ -419,7 +419,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJQ-I6-Hpp">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-WM-pmr">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-WM-pmr" userLabel="avatarImg">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -430,12 +430,18 @@
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pickAvatarPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="EWg-dd-HcH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ9-rw-bxE">
                                         <rect key="frame" x="0.0" y="113" width="93" height="34"/>
                                         <state key="normal" image="colorPicker"/>
+                                        <connections>
+                                            <action selector="pickBgColorPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="D4b-tW-lj6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -445,7 +451,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="C80-zt-zVu">
                                 <rect key="frame" x="38" y="297" width="299" height="225"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mathew joe" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16J-3T-Ywc" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16J-3T-Ywc" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="55"/>
                                         <color key="backgroundColor" red="0.2274509804" green="0.28627450980000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -461,19 +467,19 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="joesmith21@msn.com" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-BL-lf1" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-BL-lf1" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="85" width="299" height="55"/>
                                         <color key="backgroundColor" red="0.2274509804" green="0.28627450980000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="•••••••" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-Un-gBD" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-Un-gBD" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170" width="299" height="55"/>
                                         <color key="backgroundColor" red="0.2274509804" green="0.28627450980000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -498,6 +504,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="registerAccountPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="TFU-Zo-FEm"/>
                                     <action selector="registerBtnPressed:" destination="DvQ-Ud-U9u" eventType="touchUpInside" id="dkj-zG-44m"/>
                                 </connections>
                             </button>
@@ -518,7 +525,11 @@
                         <viewLayoutGuide key="safeArea" id="JNV-DM-b9j"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="b6J-BL-lf1" id="8Jn-Sf-jVZ"/>
+                        <outlet property="passwordTextField" destination="ErD-Un-gBD" id="eo4-Da-iEu"/>
                         <outlet property="signInBtn" destination="gyy-Md-8au" id="Yfn-zM-PTG"/>
+                        <outlet property="userImg" destination="S2I-WM-pmr" id="I1K-1k-4d3"/>
+                        <outlet property="usernameTextField" destination="16J-3T-Ywc" id="cAW-9x-ADb"/>
                         <segue destination="KlR-SH-STi" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="mUM-eI-cuJ"/>
                     </connections>
                 </viewController>
