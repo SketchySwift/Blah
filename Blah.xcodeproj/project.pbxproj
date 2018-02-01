@@ -11,6 +11,7 @@
 		1549F8CD201954DF001D014D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8CB201954DF001D014D /* Main.storyboard */; };
 		1549F8CF201954DF001D014D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8CE201954DF001D014D /* Assets.xcassets */; };
 		1549F8D2201954DF001D014D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1549F8D0201954DF001D014D /* LaunchScreen.storyboard */; };
+		1556E0AE2022D2340091E12B /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E0AD2022D2340091E12B /* UserDataService.swift */; };
 		15697BDA2019981F006C51F1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15697BD92019981F006C51F1 /* SWRevealViewController.m */; };
 		15697BE220199C3F006C51F1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15697BE120199C3F006C51F1 /* ChatViewController.swift */; };
 		15697BE420199C4E006C51F1 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15697BE320199C4E006C51F1 /* ChannelViewController.swift */; };
@@ -30,6 +31,7 @@
 		1549F8CE201954DF001D014D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1549F8D1201954DF001D014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1549F8D3201954DF001D014D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1556E0AD2022D2340091E12B /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		15697BD82019981F006C51F1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Blah/Supporting Files/SWRevealViewController.h"; sourceTree = SOURCE_ROOT; };
 		15697BD92019981F006C51F1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Blah/Supporting Files/SWRevealViewController.m"; sourceTree = SOURCE_ROOT; };
 		15697BDC201998A4006C51F1 /* Blah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Blah-Bridging-Header.h"; path = "Blah/Supporting Files/Blah-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				156CECDF202290C20090CA49 /* AuthService.swift */,
+				1556E0AD2022D2340091E12B /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				156CECD9201EE0470090CA49 /* LoginViewController.swift in Sources */,
 				1549F8C8201954DF001D014D /* AppDelegate.swift in Sources */,
 				15697BE220199C3F006C51F1 /* ChatViewController.swift in Sources */,
+				1556E0AE2022D2340091E12B /* UserDataService.swift in Sources */,
 				15697BE6201AA323006C51F1 /* GradientView.swift in Sources */,
 				156CECDB201EE1470090CA49 /* CustomTextfield.swift in Sources */,
 				15697BE420199C4E006C51F1 /* ChannelViewController.swift in Sources */,
