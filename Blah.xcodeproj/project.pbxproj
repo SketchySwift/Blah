@@ -19,6 +19,7 @@
 		156CECD9201EE0470090CA49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CECD8201EE0470090CA49 /* LoginViewController.swift */; };
 		156CECDB201EE1470090CA49 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CECDA201EE1470090CA49 /* CustomTextfield.swift */; };
 		156CECDD201FEC730090CA49 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CECDC201FEC730090CA49 /* CreateAccountViewController.swift */; };
+		156CECE0202290C20090CA49 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CECDF202290C20090CA49 /* AuthService.swift */; };
 		705C497984D1742F0925EA0D /* Pods_Blah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E1D4C16E029640DCC64706 /* Pods_Blah.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		156CECD8201EE0470090CA49 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		156CECDA201EE1470090CA49 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		156CECDC201FEC730090CA49 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		156CECDF202290C20090CA49 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4B24FCA86AF5D183C684BD2E /* Pods-Blah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blah/Pods-Blah.debug.xcconfig"; sourceTree = "<group>"; };
 		A046E8EE1F2583D889B2B690 /* Pods-Blah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blah/Pods-Blah.release.xcconfig"; sourceTree = "<group>"; };
 		E6E1D4C16E029640DCC64706 /* Pods_Blah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1549F8C7201954DF001D014D /* AppDelegate.swift */,
+				156CECDE202290810090CA49 /* Services */,
 				156CECD5201D86630090CA49 /* Utilities */,
 				15697BE020199C0D006C51F1 /* Model */,
 				15697BDF20199C09006C51F1 /* View */,
@@ -134,6 +137,14 @@
 				156CECD6201D86730090CA49 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		156CECDE202290810090CA49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				156CECDF202290C20090CA49 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		1F6AED5F454253A09B370A0C /* Frameworks */ = {
@@ -296,6 +307,7 @@
 				156CECDB201EE1470090CA49 /* CustomTextfield.swift in Sources */,
 				15697BE420199C4E006C51F1 /* ChannelViewController.swift in Sources */,
 				156CECDD201FEC730090CA49 /* CreateAccountViewController.swift in Sources */,
+				156CECE0202290C20090CA49 /* AuthService.swift in Sources */,
 				15697BDA2019981F006C51F1 /* SWRevealViewController.m in Sources */,
 				156CECD7201D86730090CA49 /* Constants.swift in Sources */,
 			);
