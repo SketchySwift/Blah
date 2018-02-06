@@ -11,5 +11,5 @@ target 'Blah' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Socket.IO-Client-Swift'
-  
+  pod 'SJFluidSegmentedControl', '~> 1.0'
 end
