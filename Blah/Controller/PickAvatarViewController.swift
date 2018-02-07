@@ -9,7 +9,7 @@
 import UIKit
 import SJFluidSegmentedControl
 
-class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSource, SJFluidSegmentedControlDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
 	// Outlets
 	@IBOutlet weak var collectionView: UICollectionView!
@@ -18,6 +18,8 @@ class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSou
 	@IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
 	@IBOutlet weak var segmentWidth: NSLayoutConstraint!
 	@IBOutlet weak var segmentHeight: NSLayoutConstraint!
+	
+	var avatarType = AvatarType.dark
 	
 	let screenSize: CGRect = UIScreen.main.bounds
 	
@@ -37,7 +39,7 @@ class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSou
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
-			//cell.setupView()
+			cell.configureCell(index: indexPath.item, type: avatarType)
 			return cell
 		}
 		return AvatarCell()
@@ -49,6 +51,30 @@ class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSou
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return 28
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		var numOfColumns: CGFloat = 3
+		
+		if UIScreen.main.bounds.width > 320 {
+			numOfColumns = 4
+		}
+		
+		let spaceBetweenCells: CGFloat = 10
+		let padding: CGFloat = 40
+		let cellDimension = ((collectionView.bounds.width - padding) - (numOfColumns - 1) * spaceBetweenCells) / numOfColumns
+		
+		return CGSize(width: cellDimension, height: cellDimension)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if avatarType == .dark {
+			UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+		} else {
+			UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
+		}
+		
+		self.dismiss(animated: true, completion: nil)
 	}
 	
 	func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int {
@@ -63,5 +89,13 @@ class PickAvatarViewController: UIViewController, SJFluidSegmentedControlDataSou
 		}
 	}
 	
+	func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, didChangeFromSegmentAtIndex fromIndex: Int, toSegmentAtIndex toIndex: Int) {
+		if fromIndex == 1 && toIndex == 0 {
+			avatarType = .dark
+		} else if fromIndex == 0 && toIndex == 1  {
+			avatarType = .light
+		}
+		collectionView.reloadData()
+	}
 
 }

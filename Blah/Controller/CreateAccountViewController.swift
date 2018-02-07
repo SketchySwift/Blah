@@ -24,6 +24,15 @@ class CreateAccountViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		signInBtn.roundCorners([.topRight, .bottomRight], radius: 30)
+		userImg.layer.cornerRadius = userImg.frame.size.width / 2
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		if UserDataService.instance.avatarName != "" {
+			userImg.image = UIImage(named: UserDataService.instance.avatarName)
+			avatarName = UserDataService.instance.avatarName
+		}
 	}
 
 	@IBAction func registerAccountPressed(_ sender: Any) {
