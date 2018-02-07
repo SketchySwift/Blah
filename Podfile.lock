@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
+  - IQKeyboardManagerSwift (5.0.7)
   - SJFluidSegmentedControl (1.1.2)
   - Socket.IO-Client-Swift (13.1.1):
     - Starscream (~> 3.0.2)
@@ -8,17 +9,19 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - SJFluidSegmentedControl (~> 1.0)
   - Socket.IO-Client-Swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   SJFluidSegmentedControl: efd26ea5f0832c715e2750314a2dc0cc81e39ae5
   Socket.IO-Client-Swift: f22222913f29801e30ae0df712db663ec096edc2
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 0dde098f109f9361e640988f56d072c23bcd6f2f
+PODFILE CHECKSUM: 2e5f55b70712931c7638f8e63e096eebb2f350ee
 
 COCOAPODS: 1.4.0

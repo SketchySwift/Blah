@@ -348,6 +348,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderTxt" value="username"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnV-Dz-wZA" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
@@ -360,6 +361,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderTxt" value="password"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
@@ -420,20 +422,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJQ-I6-Hpp">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-WM-pmr" userLabel="avatarImg">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="93" id="Rtx-a2-tAB"/>
-                                                    <constraint firstAttribute="width" constant="93" id="UsZ-EW-eCN"/>
-                                                </constraints>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prW-2K-YjX" userLabel="AddAvatar">
-                                                <rect key="frame" x="8" y="8" width="77" height="77"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="77" id="csm-Zf-LIM"/>
-                                                    <constraint firstAttribute="width" constant="77" id="xl3-li-Gpu"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -442,14 +432,22 @@
                                                     <action selector="pickAvatarPressed:" destination="evs-z1-F2Q" eventType="touchUpInside" id="EWg-dd-HcH"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-WM-pmr" userLabel="avatarImg">
+                                                <rect key="frame" x="16.5" y="16.5" width="60" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Lvs-QT-2q9"/>
+                                                    <constraint firstAttribute="height" constant="60" id="yvJ-lb-kTM"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="S2I-WM-pmr" firstAttribute="top" secondItem="cJQ-I6-Hpp" secondAttribute="top" id="DFt-Pj-r04"/>
-                                            <constraint firstAttribute="trailing" secondItem="S2I-WM-pmr" secondAttribute="trailing" id="Gpq-Rk-tK9"/>
-                                            <constraint firstItem="prW-2K-YjX" firstAttribute="centerX" secondItem="cJQ-I6-Hpp" secondAttribute="centerX" id="gkA-I0-4yb"/>
-                                            <constraint firstAttribute="bottom" secondItem="S2I-WM-pmr" secondAttribute="bottom" id="hEj-mg-hVK"/>
-                                            <constraint firstItem="prW-2K-YjX" firstAttribute="centerY" secondItem="cJQ-I6-Hpp" secondAttribute="centerY" id="jGe-6D-QZ1"/>
-                                            <constraint firstItem="S2I-WM-pmr" firstAttribute="leading" secondItem="cJQ-I6-Hpp" secondAttribute="leading" id="z15-Yr-2dC"/>
+                                            <constraint firstItem="prW-2K-YjX" firstAttribute="leading" secondItem="cJQ-I6-Hpp" secondAttribute="leading" id="3MQ-eV-D2v"/>
+                                            <constraint firstItem="prW-2K-YjX" firstAttribute="top" secondItem="cJQ-I6-Hpp" secondAttribute="top" id="6uJ-hX-B46"/>
+                                            <constraint firstAttribute="bottom" secondItem="prW-2K-YjX" secondAttribute="bottom" id="Lek-uJ-9Nh"/>
+                                            <constraint firstAttribute="trailing" secondItem="prW-2K-YjX" secondAttribute="trailing" id="a7r-B9-EI4"/>
+                                            <constraint firstItem="S2I-WM-pmr" firstAttribute="centerY" secondItem="cJQ-I6-Hpp" secondAttribute="centerY" id="dbo-yN-eAF"/>
+                                            <constraint firstItem="S2I-WM-pmr" firstAttribute="centerX" secondItem="cJQ-I6-Hpp" secondAttribute="centerX" id="mer-6W-Cyl"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ9-rw-bxE">
@@ -481,6 +479,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderTxt" value="username"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-BL-lf1" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
@@ -493,6 +492,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderTxt" value="email"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-Un-gBD" customClass="CustomTextfield" customModule="Blah" customModuleProvider="target">
@@ -505,6 +505,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderTxt" value="password"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
@@ -524,12 +525,21 @@
                                     <action selector="registerBtnPressed:" destination="DvQ-Ud-U9u" eventType="touchUpInside" id="dkj-zG-44m"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-bI-h1y">
+                                <rect key="frame" x="169" y="393" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="g5y-Wq-gtP"/>
+                                    <constraint firstAttribute="height" constant="37" id="jFV-uh-GB8"/>
+                                </constraints>
+                                <color key="color" red="0.34901960784313724" green="0.792156862745098" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039215686274" green="0.30980392156862746" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="C80-zt-zVu" firstAttribute="top" secondItem="NzZ-tB-6OV" secondAttribute="bottom" constant="34" id="4MV-Mg-0Fx"/>
                             <constraint firstItem="JNV-DM-b9j" firstAttribute="trailing" secondItem="C80-zt-zVu" secondAttribute="trailing" constant="38" id="DmD-1j-JTs"/>
                             <constraint firstItem="VJZ-jT-Iut" firstAttribute="leading" secondItem="JNV-DM-b9j" secondAttribute="leading" id="Efi-9d-K1k"/>
+                            <constraint firstItem="Kb7-bI-h1y" firstAttribute="top" secondItem="JNV-DM-b9j" secondAttribute="top" constant="373" id="PUo-kA-cbQ"/>
                             <constraint firstItem="gyy-Md-8au" firstAttribute="top" secondItem="JNV-DM-b9j" secondAttribute="top" constant="10" id="Sve-eH-CCa"/>
                             <constraint firstItem="NzZ-tB-6OV" firstAttribute="centerX" secondItem="4Km-hc-vHe" secondAttribute="centerX" id="WjI-k6-b3x"/>
                             <constraint firstItem="gyy-Md-8au" firstAttribute="leading" secondItem="JNV-DM-b9j" secondAttribute="leading" id="bph-mm-dXq"/>
@@ -537,13 +547,16 @@
                             <constraint firstItem="VJZ-jT-Iut" firstAttribute="bottom" secondItem="JNV-DM-b9j" secondAttribute="bottom" id="kFO-z3-U9i"/>
                             <constraint firstItem="VJZ-jT-Iut" firstAttribute="trailing" secondItem="JNV-DM-b9j" secondAttribute="trailing" id="ra7-XV-1kl"/>
                             <constraint firstItem="NzZ-tB-6OV" firstAttribute="top" secondItem="JNV-DM-b9j" secondAttribute="top" constant="96" id="s5z-Df-WNJ"/>
+                            <constraint firstItem="Kb7-bI-h1y" firstAttribute="centerX" secondItem="4Km-hc-vHe" secondAttribute="centerX" id="y6v-Wk-Nv8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JNV-DM-b9j"/>
                     </view>
                     <connections>
+                        <outlet property="bgView" destination="cJQ-I6-Hpp" id="oUO-yP-j8T"/>
                         <outlet property="emailTextField" destination="b6J-BL-lf1" id="8Jn-Sf-jVZ"/>
                         <outlet property="passwordTextField" destination="ErD-Un-gBD" id="eo4-Da-iEu"/>
                         <outlet property="signInBtn" destination="gyy-Md-8au" id="Yfn-zM-PTG"/>
+                        <outlet property="spinner" destination="Kb7-bI-h1y" id="3nT-E9-eTL"/>
                         <outlet property="userImg" destination="S2I-WM-pmr" id="I1K-1k-4d3"/>
                         <outlet property="usernameTextField" destination="16J-3T-Ywc" id="cAW-9x-ADb"/>
                         <segue destination="KlR-SH-STi" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="mUM-eI-cuJ"/>
