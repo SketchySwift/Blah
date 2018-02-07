@@ -132,7 +132,6 @@ class AuthService {
 					let name = json["name"].stringValue
 					
 					UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
-					//completion(true)
 				} catch let err as NSError {
 					print(err)
 				}
