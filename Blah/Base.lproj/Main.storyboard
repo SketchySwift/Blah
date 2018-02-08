@@ -103,37 +103,48 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-bS-eRg">
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="172"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blahLogo" translatesAutoresizingMaskIntoConstraints="NO" id="I7s-yu-h67">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-Fi-23s">
                                         <rect key="frame" x="113" y="25" width="88" height="88"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="I7s-yu-h67">
+                                                <rect key="frame" x="12" y="12" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="PXe-yc-0pG"/>
+                                                    <constraint firstAttribute="height" constant="64" id="dEB-DF-B0A"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="88" id="4FH-bI-XkW"/>
-                                            <constraint firstAttribute="width" constant="88" id="y0D-AZ-VUu"/>
+                                            <constraint firstAttribute="width" constant="88" id="Cok-EO-jBm"/>
+                                            <constraint firstItem="I7s-yu-h67" firstAttribute="centerY" secondItem="BbQ-Fi-23s" secondAttribute="centerY" id="XhH-jS-IUA"/>
+                                            <constraint firstAttribute="height" constant="88" id="lfn-tk-KdW"/>
+                                            <constraint firstItem="I7s-yu-h67" firstAttribute="centerX" secondItem="BbQ-Fi-23s" secondAttribute="centerX" id="yQm-Uw-UCU"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="44"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-M9-qFG">
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-M9-qFG">
                                         <rect key="frame" x="53" y="131" width="208" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="W2J-RL-4rr"/>
-                                            <constraint firstAttribute="height" constant="31" id="eP9-b8-Ldd"/>
+                                            <constraint firstAttribute="width" constant="208" id="kjY-8y-VfC"/>
+                                            <constraint firstAttribute="height" constant="31" id="zSP-m6-WuM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                        <state key="normal" title="Blah">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34509803921568627" green="0.37254901960784315" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="I7s-yu-h67" firstAttribute="top" secondItem="ubL-bS-eRg" secondAttribute="top" constant="25" id="9al-YJ-hcU"/>
-                                    <constraint firstItem="I7s-yu-h67" firstAttribute="centerX" secondItem="ubL-bS-eRg" secondAttribute="centerX" id="HcW-b8-dlu"/>
-                                    <constraint firstItem="YVi-M9-qFG" firstAttribute="centerX" secondItem="ubL-bS-eRg" secondAttribute="centerX" id="XyN-0M-r1N"/>
+                                    <constraint firstItem="BbQ-Fi-23s" firstAttribute="centerX" secondItem="ubL-bS-eRg" secondAttribute="centerX" id="AeM-HB-6cK"/>
+                                    <constraint firstItem="YVi-M9-qFG" firstAttribute="top" secondItem="BbQ-Fi-23s" secondAttribute="bottom" constant="18" id="NAq-OP-l3N"/>
+                                    <constraint firstItem="BbQ-Fi-23s" firstAttribute="top" secondItem="ubL-bS-eRg" secondAttribute="top" constant="25" id="QG8-uZ-1a7"/>
                                     <constraint firstAttribute="height" constant="172" id="aXR-S4-xZM"/>
-                                    <constraint firstItem="YVi-M9-qFG" firstAttribute="top" secondItem="I7s-yu-h67" secondAttribute="bottom" constant="18" id="j4u-fB-T8B"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-Jr-gSA">
@@ -247,6 +258,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="bgView" destination="BbQ-Fi-23s" id="AWe-4U-7te"/>
                         <outlet property="loginBtn" destination="vvi-Jg-KYG" id="OP6-Bd-I4D"/>
                         <outlet property="userImg" destination="I7s-yu-h67" id="MtA-AB-p62"/>
                         <segue destination="DvQ-Ud-U9u" kind="show" identifier="toLogin" id="YVB-Kk-NS8"/>
@@ -688,5 +700,6 @@
         <image name="colorPicker" width="92" height="34"/>
         <image name="dark0" width="100" height="100"/>
         <image name="menu" width="75" height="63"/>
+        <image name="profileDefault" width="192" height="192"/>
     </resources>
 </document>

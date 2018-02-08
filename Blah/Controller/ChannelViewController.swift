@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelViewController: UIViewController {
 
+	@IBOutlet weak var bgView: UIView!
 	@IBOutlet weak var userImg: UIImageView!
 	@IBOutlet weak var loginBtn: UIButton!
 	@IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
@@ -24,9 +25,11 @@ class ChannelViewController: UIViewController {
 		if AuthService.instance.isLoggedIn {
 			loginBtn.setTitle(UserDataService.instance.name, for: .normal)
 			userImg.image = UIImage(named: UserDataService.instance.avatarName)
+			bgView.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
 		} else {
 			loginBtn.setTitle("Login", for: .normal)
 			userImg.image = UIImage(named: "blahLogo")
+			bgView.backgroundColor = .clear
 		}
 	}
 
